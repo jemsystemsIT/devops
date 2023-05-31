@@ -1,0 +1,15 @@
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+- task: WorkItemUpdater@3
+  inputs:
+    workitemsSource: 'Build'
+    workItemType: 'Project'
+    workItemState: 'New'
+    workItemCurrentState: 'Done'
+    workItemDone: true
+    linkBuild: true
+    updateAssignedTo: 'Never'
+    bypassRules: true
+    failTaskIfNoWorkItemsAvailable: true
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
