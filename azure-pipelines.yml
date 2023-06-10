@@ -1,4 +1,12 @@
 - script: |
+- task: WorkItemUpdater@3
+  inputs:
+    workitemsSource: 'Build'
+    workItemType: 'Customer'
+    workitemLimit: '10'
+    allWorkItemsSinceLastRelease: true
+    workItemState: 'new'
+    updateAssignedTo: 'rodrig0@jemsystems.com'
     echo Add other tasks to build, test, and deploy your project.
 - task: WorkItemUpdater@3
   inputs:
